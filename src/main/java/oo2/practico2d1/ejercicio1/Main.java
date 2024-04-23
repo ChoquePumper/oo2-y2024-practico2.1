@@ -4,13 +4,20 @@ public class Main {
 	public static void main(String[] args) {
 
 		AprendiendoLambdas a = new AprendiendoLambdas();
-		a.unMetodo((b) -> { System.out.println("abcd" + b);});	// B
-		a.unMetodo(() -> System.out.println("abcd"));	// A
-		a.unMetodo((variable) -> {System.out.println("abcd");});	// B
-		a.unMetodo((C) (variable) -> {System.out.println("abcd"); return true;}); // C?
+		a.unMetodo((b) -> {
+			System.out.println("abcd" + b);
+		});    // B
+		a.unMetodo(() -> System.out.println("abcd"));    // A
+		a.unMetodo((variable) -> {
+			System.out.println("abcd");
+		});    // B
+		a.unMetodo((C) (variable) -> {
+			System.out.println("abcd");
+			return true;
+		}); // C? El compilador por alguna razón no lo puede resolver sin hacer casting al lambda.
 		a.unMetodo((Long variable) -> {
 			System.out.println("abcd");
 			return 10L;
-		});	// D
+		});    // D
 	}
 }

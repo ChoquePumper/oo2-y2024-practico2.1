@@ -33,7 +33,7 @@ public class Main {
 				new Persona("Noah", "King"),
 		};
 
-		Consumer<Persona> mostrarPersona = (persona) -> System.out.println("* "+ persona);
+		Consumer<Persona> mostrarPersona = (persona) -> System.out.println("* " + persona);
 
 		System.out.println("Nombres que empiezan con E:");
 		Predicate<Persona> nombreEmpiezaConE = (persona) -> persona.nombre().startsWith("E");
